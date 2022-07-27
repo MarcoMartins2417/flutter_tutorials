@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       title: 'STARTUP_NAMER',
-      theme: ThemeData(          // Add the 5 lines from here... 
+      theme: ThemeData(          
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.red,
           foregroundColor: Colors.white,
