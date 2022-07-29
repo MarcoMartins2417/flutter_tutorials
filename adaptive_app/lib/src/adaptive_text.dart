@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AdaptiveText extends StatelessWidget {
   const AdaptiveText(this.data, {super.key, this.style});
+  
   final String data;
   final TextStyle? style;
 

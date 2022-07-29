@@ -20,6 +20,7 @@ class FlutterDevPlaylists extends ChangeNotifier {
 
   Future<void> _loadPlaylists() async {
     String? nextPageToken;
+    
     _playlists.clear();
 
     do {
