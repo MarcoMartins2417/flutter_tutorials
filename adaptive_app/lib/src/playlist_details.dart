@@ -30,6 +30,7 @@ class PlaylistDetails extends StatelessWidget {
 
 class _PlaylistDetailsListView extends StatefulWidget {
   const _PlaylistDetailsListView({required this.playlistItems});
+  
   final List<PlaylistItem> playlistItems;
 
   @override
@@ -67,7 +68,7 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
               alignment: Alignment.center,
               children: [
                 if (playlistItem.snippet!.thumbnails!.high != null)
-                  AdaptiveImage.network(    // Modify this line
+                  AdaptiveImage.network(    
                       playlistItem.snippet!.thumbnails!.high!.url!), 
                 _buildGradient(context),
                 _buildTitleAndSubtitle(context, playlistItem),
@@ -109,7 +110,6 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
             playlistItem.snippet!.title!,
             style: Theme.of(context).textTheme.bodyText1!.copyWith(
                   fontSize: 18,
-                  // fontWeight: FontWeight.bold,
                 ),
           ),
           if (playlistItem.snippet!.videoOwnerChannelTitle != null)
