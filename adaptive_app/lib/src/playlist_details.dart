@@ -3,13 +3,12 @@ import 'package:googleapis/youtube/v3.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/link.dart';
 
-import 'adaptive_image.dart';  
+import 'adaptive_image.dart';
 import 'adaptive_text.dart';
 import 'app_state.dart';
 
 class PlaylistDetails extends StatelessWidget {
-  const PlaylistDetails(
-      {required this.playlistId, required this.playlistName, super.key});
+  const PlaylistDetails({required this.playlistId, required this.playlistName, super.key});
   final String playlistId;
   final String playlistName;
 
@@ -30,12 +29,10 @@ class PlaylistDetails extends StatelessWidget {
 
 class _PlaylistDetailsListView extends StatefulWidget {
   const _PlaylistDetailsListView({required this.playlistItems});
-  
   final List<PlaylistItem> playlistItems;
 
   @override
-  State<_PlaylistDetailsListView> createState() =>
-      _PlaylistDetailsListViewState();
+  State<_PlaylistDetailsListView> createState() => _PlaylistDetailsListViewState();
 }
 
 class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
@@ -68,8 +65,7 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
               alignment: Alignment.center,
               children: [
                 if (playlistItem.snippet!.thumbnails!.high != null)
-                  AdaptiveImage.network(    
-                      playlistItem.snippet!.thumbnails!.high!.url!), 
+                  AdaptiveImage.network(playlistItem.snippet!.thumbnails!.high!.url!),
                 _buildGradient(context),
                 _buildTitleAndSubtitle(context, playlistItem),
                 _buildPlayButton(context, playlistItem),
@@ -96,8 +92,7 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
     );
   }
 
-  Widget _buildTitleAndSubtitle(
-      BuildContext context, PlaylistItem playlistItem) {
+  Widget _buildTitleAndSubtitle(BuildContext context, PlaylistItem playlistItem) {
     return Positioned(
       left: 20,
       right: 0,
@@ -139,8 +134,7 @@ class _PlaylistDetailsListViewState extends State<_PlaylistDetailsListView> {
           ),
         ),
         Link(
-          uri: Uri.parse(
-              'https://www.youtube.com/watch?v=${playlistItem.snippet!.resourceId!.videoId}'),
+          uri: Uri.parse('https://www.youtube.com/watch?v=${playlistItem.snippet!.resourceId!.videoId}'),
           builder: (context, followLink) => IconButton(
             onPressed: followLink,
             color: Colors.red,
