@@ -13,10 +13,10 @@ Widget createHomeScreen() => ChangeNotifierProvider<Favorites>(
 
 void main() {
   group('Home Page Widget Tests', () {
-    testWidgets('Testing if ListView shows up', (tester) async {  
-    await tester.pumpWidget(createHomeScreen());
-    expect(find.byType(ListView), findsOneWidget);
-  });
+    testWidgets('Testing if ListView shows up', (tester) async {
+      await tester.pumpWidget(createHomeScreen());
+      expect(find.byType(ListView), findsOneWidget);
+    });
     testWidgets('Testing Scrolling', (tester) async {
       await tester.pumpWidget(createHomeScreen());
       expect(find.text('Item 0'), findsOneWidget);

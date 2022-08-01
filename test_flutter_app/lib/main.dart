@@ -9,7 +9,6 @@ void main() {
 }
 
 class TestingApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Favorites>(

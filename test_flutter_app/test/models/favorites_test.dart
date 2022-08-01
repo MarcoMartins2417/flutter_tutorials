@@ -12,6 +12,6 @@ void main() {
       expect(favorites.items.contains(number), true);
       favorites.remove(number);
       expect(favorites.items.contains(number), false);
-    });    
+    });
   });
 }

@@ -38,8 +38,7 @@ void main() {
       var totalItems = tester.widgetList(find.byIcon(Icons.close)).length;
       await tester.tap(find.byIcon(Icons.close).first);
       await tester.pumpAndSettle();
-      expect(tester.widgetList(find.byIcon(Icons.close)).length,
-          lessThan(totalItems));
+      expect(tester.widgetList(find.byIcon(Icons.close)).length, lessThan(totalItems));
       expect(find.text('Removed from favorites.'), findsOneWidget);
     });
   });
