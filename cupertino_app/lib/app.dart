@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
-import 'product_list_tab.dart';   
-import 'search_tab.dart';         
+import 'product_list_tab.dart';
+import 'search_tab.dart';
 import 'shopping_cart_tab.dart';
 
 class CupertinoStoreHomePage extends StatelessWidget {
@@ -62,10 +62,7 @@ class CupertinoStoreApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // This app is designed only to work vertically, so we limit
-    // orientations to portrait up and down.
-    SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
     return const CupertinoApp(
       theme: CupertinoThemeData(brightness: Brightness.light),

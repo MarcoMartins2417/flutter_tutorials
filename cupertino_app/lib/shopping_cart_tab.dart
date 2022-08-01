@@ -141,8 +141,7 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
     );
   }
 
-  SliverChildBuilderDelegate _buildSliverChildBuilderDelegate(
-      AppStateModel model) {
+  SliverChildBuilderDelegate _buildSliverChildBuilderDelegate(AppStateModel model) {
     return SliverChildBuilderDelegate(
       (context, index) {
         final productIndex = index - 4;
@@ -171,14 +170,12 @@ class _ShoppingCartTabState extends State<ShoppingCartTab> {
             if (model.productsInCart.length > productIndex) {
               return ShoppingCartItem(
                 index: index,
-                product: model.getProductById(
-                    model.productsInCart.keys.toList()[productIndex]),
+                product: model.getProductById(model.productsInCart.keys.toList()[productIndex]),
                 quantity: model.productsInCart.values.toList()[productIndex],
                 lastItem: productIndex == model.productsInCart.length - 1,
                 formatter: _currencyFormat,
               );
-            } else if (model.productsInCart.keys.length == productIndex &&
-                model.productsInCart.isNotEmpty) {
+            } else if (model.productsInCart.keys.length == productIndex && model.productsInCart.isNotEmpty) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
